@@ -1,0 +1,26 @@
+{
+  "name": "hexo-theme-simplest",
+  "version": "1.0.0",
+  "description": "hexo theme, wrote by swig & scss",
+  "homepage": "https://github.com/dnxbf321/hexo-theme-simplest",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnxbf321/hexo-theme-simplest.git"
+  },
+  "keywords": [
+    "hexo",
+    "hexo theme",
+    "swig",
+    "scss"
+  ],
+  "author": {
+    "name": "dnxbf321",
+    "email": "dnxbf321@gamil.com",
+    "url": "https://dnxbf321.github.io"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer-core": "^5.1.8",
+    "clean-css": "^3.1.8"
+  }
+}

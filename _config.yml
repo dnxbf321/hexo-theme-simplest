@@ -1,0 +1,13 @@
+menu:
+  home: /
+  archive: /archives
+
+excerpt_link: Read More
+
+fancybox: true
+
+comment:
+  enable: true
+  disqus_shortname: your_disqus_shortname
+
+google_analytics: your_google_analytics_id
