@@ -1,32 +1,42 @@
+@import '../base/variable';
+
 .entry {
   .gist {
+    line-height: 1.6;
+
     overflow: auto;
+
     margin-top: 15px;
     padding: 7px 15px;
+
+    color: #666;
     border: 1px solid $color-border;
     border-radius: 2px;
     background: #eee;
-    color: #666;
-    line-height: 1.6;
     .gist-file {
-      margin: 0;
-      border: none;
-      font-size: 0.9em;
       font-family: inherit;
+      font-size: .9em;
+
+      margin: 0;
+
+      border: none;
       .gist-data {
         border-bottom: none;
         background: none;
         pre {
-          padding: 0 !important;
           font-family: font-mono;
+
+          padding: 0 !important;
         }
       }
       .gist-meta {
+        font-size: 100%;
+
         margin-top: 5px;
         padding: 0;
-        background: none;
+
         color: $color-meta;
-        font-size: 100%;
+        background: none;
         a {
           color: $color-link;
           &:visited {
@@ -39,15 +49,19 @@
   figure {
     margin: 0;
     &.highlight {
+      line-height: 2;
+
       position: relative;
+
       margin-top: 15px;
       padding: 7px 15px;
+
       border: 1px solid $color-border;
       border-radius: 2px;
       background: #eee;
-      line-height: 2;
       figcaption {
         margin-bottom: 5px;
+
         color: $color-meta;
         a {
           position: absolute;
@@ -58,11 +72,13 @@
     pre {
       margin: 0;
       padding: 0;
+
       border: none;
     }
 
     table {
       margin-top: 0;
+
       border-spacing: 0;
       td {
         border: none;
@@ -71,14 +87,17 @@
 
     .gutter {
       padding: 0 15px 0 0;
-      border-right: 1px solid $color-border;
-      color: $color-meta;
+
       text-align: right;
+
+      color: $color-meta;
+      border-right: 1px solid $color-border;
     }
     .code {
       padding: 0 0 0 15px;
+
+      color: #2e2e2e;
       border-left: 1px solid #fff;
-      color: #2E2E2E;
     }
     .line {
       line-height: 20px;
@@ -87,10 +106,17 @@
   pre {
     // Theme: Solarized - Light
     // More theme here: http://softwaremaniacs.org/media/soft/highlight/test.html
-    .comment, .template_comment, .diff .header, .doctype, .pi, .lisp .string, .javadoc {
-      color: #93a1a1;
-      font-style: italic;
+    .comment,
+    .template_comment,
+    .diff .header,
+    .doctype,
+    .pi,
+    .lisp .string,
+    .javadoc {
       font-family: $font-serif;
+      font-style: italic;
+
+      color: #93a1a1;
     }
 
     .keyword,
@@ -101,7 +127,7 @@
     .request,
     .status,
     .nginx .title {
-      color: #E5E959
+      color: #e5e959;
     }
 
     .number,
@@ -112,7 +138,7 @@
     .tex .formula,
     .regexp,
     .hexcolor {
-      color: #00AF3C;
+      color: #00af3c;
     }
 
     .title,
@@ -124,7 +150,7 @@
     .vhdl,
     .literal,
     .id {
-      color: #27928F;
+      color: #27928f;
     }
 
     .attribute,
@@ -135,7 +161,7 @@
     .class .title,
     .parent,
     .haskell .type {
-      color: #0E0F24;
+      color: #0e0f24;
     }
 
     .preprocessor,
@@ -150,11 +176,11 @@
     .subst,
     .cdata,
     .clojure .title {
-      color: #8E3539;
+      color: #8e3539;
     }
 
     .deletion {
-      color: #DA0C30;
+      color: #da0c30;
     }
   }
 }

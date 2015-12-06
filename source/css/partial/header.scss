@@ -1,20 +1,26 @@
+@import '../base/variable';
+
 $margin: 15px;
 
 #header {
   position: fixed;
+  z-index: 9;
   top: 0;
   left: 0;
-  z-index: 9;
-  padding: 30px 0;
+
   width: 100%;
+  padding: 30px 0;
+
   background: $color-background;
   text-shadow: 0 1px 1px rgba(0, 0, 0, .05);
   .center {
     .wrap {
       display: table;
+
       width: 100%;
       > * {
         display: table-cell;
+
         vertical-align: bottom;
       }
     }
@@ -29,8 +35,9 @@ $margin: 15px;
     margin: $margin 0;
   }
   h2 {
-    margin: $margin 0;
     font-size: 14px;
+
+    margin: $margin 0;
   }
 }
 
@@ -39,11 +46,14 @@ $margin: 15px;
   ul {
     float: right;
     overflow: hidden;
+
     margin: $margin 0;
     padding: 0;
+
     list-style: none;
     li {
       float: left;
+
       margin-left: 50px;
       a {
         font-size: 14px;
@@ -67,10 +77,12 @@ $margin: 15px;
 
 @media screen and (max-width: $width-phone) {
   #header {
-    padding-bottom: 10px;
     position: absolute;
+
+    padding-bottom: 10px;
   }
-  #site, #menu {
+  #site,
+  #menu {
     display: block !important;
   }
   #site {
@@ -83,8 +95,8 @@ $margin: 15px;
     ul {
       float: none;
       li {
-        margin-left: 0;
         margin-right: 30px;
+        margin-left: 0;
         a {
           font-size: 16px;
         }

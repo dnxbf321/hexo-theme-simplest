@@ -1,31 +1,25 @@
-var CleanCSS = require('clean-css'),
-	autoprefixer = require('autoprefixer-core');
+'use strict';
 
-var opts = {
-	autoprefixer: {
-		safe: true,
-		browsers: ['> 5%', 'last 3 versions', 'Firefox ESR', 'iOS >= 6', 'Android >= 4.0', 'ExplorerMobile >= 10']
-	},
-	cleanCss: {
-		advanced: false,
-		keepSpecialComments: 0,
-		processImport: false,
-		rebase: false
-	}
-};
+var autoprefixer = require('autoprefixer');
+var postcss = require('postcss-js');
 
-function minifyCss(source) {
-	var ret = '';
-	ret = autoprefixer.process(source, opts.autoprefixer).css;
-	ret = new CleanCSS(opts.cleanCss).minify(ret).styles;
+hexo.extend.filter.register('after_render:css', function(css, data) {
 
-	return ret;
-}
+  if (data.path.indexOf('bower_components') === -1) {
 
-hexo.extend.filter.register('after_render:css', function (str, data) {
-	if (data.path.indexOf('bower_components') === -1) {
-		return minifyCss(str);
-	} else {
-		return str;
-	}
+    var prefixer = postcss.sync([
+      autoprefixer({
+        browsers: ['> 5%', 'last 3 versions', 'Firefox ESR', 'iOS >= 6', 'Android >= 4.0', 'ExplorerMobile >= 10']
+      })
+    ]);
+    var result = prefixer(css);
+
+    return result.css;
+
+  } else {
+
+    return css;
+
+  }
+
 });

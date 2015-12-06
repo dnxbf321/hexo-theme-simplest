@@ -1,7 +1,10 @@
+@import './variable';
+
 html {
-  font: {
+  font:  {
     family: $font-default;
   }
+
   background: $color-background;
 }
 
@@ -10,11 +13,13 @@ body {
 }
 
 a {
-  color: $color-link;
   text-decoration: none;
+
+  color: $color-link;
   &:hover {
-    color: $color-link-hover;
     text-decoration: none;
+
+    color: $color-link-hover;
   }
 }
 
@@ -23,15 +28,17 @@ a {
     display: block;
     clear: both;
     overflow: hidden;
+
     height: 0;
+
     content: '';
   }
 }
 
 .center {
-  margin: auto;
   min-width: 300px;
   max-width: $width-wide;
+  margin: auto;
 }
 
 @media screen and (max-width: $width-wide + 60) {
