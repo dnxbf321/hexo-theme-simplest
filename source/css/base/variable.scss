@@ -2,24 +2,29 @@ $font-icon-path: 'font/fontawesome-webfont';
 
 @font-face {
   font-family: 'FontAwesome';
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 200;
+  font-style: 300;
 
   src: url(#{$font-icon-path}.eot?#iefix) format('embedded-opentype'), url(#{$font-icon-path}.woff) format('woff'), url(#{$font-icon-path}.ttf) format('truetype'), url(#{$font-icon-path}.svg#FontAwesomeRegular) format('svg');
 }
 
+/* Custom fonts */
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+
+
 // Color
-$color-background: #fff;
-$color-font: #0d0000;
-$color-meta: #4e5359;
-$color-border: #7c848c;
-$color-link: #63aaff;
-$color-link-hover: #000;
+$color-background: #F9F9F9;
+$color-font: #212121;
+$color-meta: #727272;
+$color-border: #B5B5B5;
+$color-link: #00BBD5;
+$color-link-hover: #00BBD5;
 
 // Font
-$font-default: 'Microsoft Yahei', sans-serif;
+$font-default: 'Roboto', sans-serif;
 $font-serif: serif;
-$font-mono: Monaco, Menlo, Consolas, 'Courier New', monospace;
+$font-mono: 'Roboto Mono', ;
 $font-icon: FontAwesome;
 
 // Width

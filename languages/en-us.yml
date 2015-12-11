@@ -1,8 +1,8 @@
-tag: Tag
-category: Category
-comment: Comment
-home: Home
-archive: Archive
+tag: tag
+category: category
+comment: comment
+home: home
+archive: archive
 search: Google
-prev: Previous
-next: Next
+prev: prev
+next: next
