@@ -1,13 +1,19 @@
 menu:
-  home: /
+  about: /about
   archive: /archives
 
-excerpt_link: Read More
+excerpt_link: read more
 
 fancybox: true
 
+per_page: 3
+
 comment:
   enable: true
-  disqus_shortname: your_disqus_shortname
+  disqus_shortname: deubaka
 
-google_analytics: your_google_analytics_id
+google_analytics: UA-71294425-1
+
+deploy:
+  type: heroku
+  repo: git@heroku.com:deubaka-hexo-blog.git
