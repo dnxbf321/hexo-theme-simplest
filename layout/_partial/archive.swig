@@ -1,9 +1,3 @@
-{% if page.archive && !page.year %}
-	{% include '../_widget/search.swig' %}
-	{% include '../_widget/category.swig' %}
-	{% include '../_widget/tag.swig' %}
-{% endif%}
-
 <div class="archive">
 	{% if page.category %}
 		<h2 class="archive-title category">{{ page.category }}</h2>
