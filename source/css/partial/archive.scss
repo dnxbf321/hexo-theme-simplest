@@ -1,12 +1,15 @@
 @import '../base/variable';
 
 .archive-title {
-  color: $color-meta;
   font-weight: normal;
+
+  color: $color-meta;
   &::before {
-    padding-right: 15px;
-    content: '\f073';
     font-family: $font-icon;
+
+    padding-right: 15px;
+
+    content: '\f073';
   }
   &.tag {
     &::before {
@@ -22,27 +25,34 @@
 
 .search {
   input {
-    box-sizing: border-box;
-    padding: 10px 15px 10px 3px;
-    width: 100%;
-    border: 1px solid $color-border;
-    background: #fff;
-    color: $color-meta;
     font-size: 14px;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 15px 10px 3px;
+
+    color: $color-meta;
+    border: 1px solid $color-border;
+    outline: none;
+    background: #fff;
   }
 }
 
 .widget {
   margin-bottom: 30px;
   ul.entry {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    list-style: none;
     font-size: 14px;
     line-height: 2;
+
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
     li {
       float: left;
+
       margin-right: 30px;
     }
   }
@@ -52,13 +62,16 @@
     }
     small {
       margin-left: 2px;
+
       color: $color-meta;
       &::before {
         padding-right: 2px;
+
         content: '(';
       }
       &::after {
         padding-left: 2px;
+
         content: ')';
       }
     }

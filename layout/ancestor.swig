@@ -2,14 +2,16 @@
 <html>
 <head>
 	<meta charset="UTF-8"/>
-	<meta name="viewport"
-	      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="description" content="{{ config.description }}">
 	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 
 	{% block stylesheet %}
+	{% if theme.fancybox %}
+	<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+	{% endif %}
 	<link rel="stylesheet" href="/bower_components/normalize.css/normalize.css"/>
 	<link rel="stylesheet" href="/css/style.css">
 	{% endblock %}
@@ -51,7 +53,6 @@
 </script>
 
 {% if theme.fancybox %}
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
 <script>
 	(function ($) {
