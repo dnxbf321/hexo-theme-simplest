@@ -271,7 +271,6 @@ article {
 
     h1,
     h2 {
-      font-weight: normal;
       line-height: 1;
 
       margin-top: 1.5em;
@@ -281,7 +280,6 @@ article {
     h4,
     h5,
     h6 {
-      font-weight: normal;
       line-height: 1;
     }
 
@@ -355,10 +353,14 @@ article {
 
     table {
       border-collapse: collapse;
+      th,
       td {
         padding: 2px 10px;
 
         border: 1px solid $color-border;
+      }
+      th {
+        font-weight: bold;
       }
     }
   }

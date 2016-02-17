@@ -8,6 +8,6 @@ fancybox: true
 
 comment:
   enable: true
-  disqus_shortname: your_disqus_shortname
+  disqus_shortname: dnxbf321
 
-google_analytics: your_google_analytics_id
+google_analytics:
