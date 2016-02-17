@@ -6,13 +6,12 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="description" content="{{ config.description }}">
-	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 
 	{% block stylesheet %}
 	{% if theme.fancybox %}
 	<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 	{% endif %}
-	<link rel="stylesheet" href="/bower_components/normalize.css/normalize.css"/>
+	<link rel="stylesheet" href="/css/normalize.css"/>
 	<link rel="stylesheet" href="/css/style.css">
 	{% endblock %}
 
@@ -33,9 +32,7 @@
 {% include '_partial/footer.swig' %}
 
 {% block scripts %}
-<script src="/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
+<script src="/js/jquery.min.js"></script>
 {% endblock %}
 
 <script>
