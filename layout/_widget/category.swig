@@ -1,6 +1,6 @@
 {% if site.categories.length %}
 <div class="widget tag category">
-	<h2 class="archive-title">{{ __('category') }}</h2>
+	<h2 class="archive-title"><i class="fa fa-folder"></i> {{ __('category') }}</h2>
 	<ul class="entry">
 		{% for category in site.categories.sort('name')%}
 		<li><a href="{{ url_for(category.path) }}">{{ category.name }}</a>

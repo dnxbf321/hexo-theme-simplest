@@ -1,6 +1,6 @@
 {% if site.tags.length %}
 <div class="widget tag">
-	<h2 class="archive-title">{{ __('tag') }}</h2>
+	<h2 class="archive-title"><i class="fa fa-tags"></i> {{ __('tag') }}</h2>
 	<ul class="entry">
 		{% for tag in site.tags.sort('name') %}
 		<li><a href="{{ url_for(tag.path) }}">#{{ tag.name }}</a>

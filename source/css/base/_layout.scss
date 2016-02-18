@@ -1,0 +1,82 @@
+html {
+  font:  {
+    family: $font-default;
+  }
+
+  background: $color-background;
+}
+
+body {
+  padding-top: 190px;
+}
+
+a {
+  text-decoration: none;
+
+  color: $color-link;
+  &:hover {
+    text-decoration: none;
+
+    color: $color-link-hover;
+    text-shadow: 0 0 2px rgba(0, 0, 0, .15);
+  }
+}
+
+.clearfix {
+  &::after {
+    display: block;
+    clear: both;
+    overflow: hidden;
+
+    height: 0;
+
+    content: '';
+  }
+}
+
+.center {
+  min-width: 300px;
+  max-width: $width-wide;
+  margin: auto;
+}
+
+#postPrev,
+#postNext {
+  line-height: 100%;
+  line-height: 40px;
+
+  position: fixed;
+  z-index: 9;
+  bottom: 100px;
+
+  width: 40px;
+  height: 40px;
+
+  text-align: center;
+
+  color: $color-meta;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, .3);
+  &:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, .8);
+  }
+}
+#postPrev {
+  left: 0;
+}
+#postNext {
+  right: 0;
+}
+
+@media screen and (max-width: $width-wide + 60) {
+  .center {
+    margin: 0 30px;
+  }
+}
+
+@media screen and (max-width: $width-phone) {
+  .center {
+    margin: 0 10px;
+  }
+}

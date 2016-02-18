@@ -1,0 +1,22 @@
+#pagination {
+  text-align: right;
+  a {
+    font-weight: bold;
+
+    display: inline-block;
+
+    margin: 0 10px;
+    padding: 5px 0;
+
+    color: $color-meta;
+    &:hover {
+      color: $color-link-hover;
+    }
+    &.prev {
+      margin-left: 0;
+    }
+    &.next {
+      margin-right: 0;
+    }
+  }
+}
