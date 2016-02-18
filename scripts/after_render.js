@@ -3,6 +3,7 @@
 var autoprefixer = require('autoprefixer');
 var postcss = require('postcss');
 var postcssJs = require('postcss-js');
+var uglifyJs = require('uglify-js');
 
 hexo.extend.filter.register('after_render:css', function(css, data) {
   css = postcss.parse(css);
@@ -18,4 +19,14 @@ hexo.extend.filter.register('after_render:css', function(css, data) {
 
   return result.css;
 
+});
+
+hexo.extend.filter.register('after_render:js', function(js, data) {
+  if (!/(min\.js|bower_components)+/i.test(data.path)) {
+    var result = uglifyJs.minify(js, {
+      fromString: true
+    });
+    js = result.code;
+  }
+  return js;
 });

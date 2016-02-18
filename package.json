@@ -23,6 +23,7 @@
     "autoprefixer": "^6.1.2",
     "node-sass": "^3.4.2",
     "postcss": "^5.0.12",
-    "postcss-js": "^0.1.0"
+    "postcss-js": "^0.1.0",
+    "uglify-js": "^2.6.1"
   }
 }
