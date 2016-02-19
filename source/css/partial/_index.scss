@@ -28,6 +28,8 @@
   left: 0;
 
   width: 100%;
+
+  pointer-events: none;
   .title {
     font-size: 28px;
 
@@ -37,5 +39,14 @@
     padding: 13px 0;
 
     background: #fff;
+  }
+}
+
+@media screen and (max-width: $width-phone) {
+  #fixTitle {
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    .title {
+      display: block;
+    }
   }
 }

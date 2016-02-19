@@ -17,6 +17,7 @@
 
   function removeFixTitle() {
     $fix.hide();
+    curText = null;
   }
 
   $(window).on('scroll', function() {
