@@ -8,6 +8,6 @@
 	{% if unTitleLink %}
 		<h1 class="title">{{ item.title }}</h1>
 	{% else %}
-		<h1 class="title"><a href="{{ url_for(item.path) }}">{{ item.title }}</a></h1>
+		<h1 class="title" data-role="articleTitle"><a href="{{ url_for(item.path) }}">{{ item.title }}</a></h1>
 	{% endif %}
 {% endif %}

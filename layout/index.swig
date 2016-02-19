@@ -14,3 +14,7 @@
 	{% include '_partial/disqus_count.swig' %}
 
 {% endblock %}
+
+{% block scripts %}
+	<script src="/js/title-animate.js"></script>
+{% endblock %}

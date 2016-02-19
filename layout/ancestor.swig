@@ -38,16 +38,18 @@
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/js/header-animate.js"></script>
 
+{% block scripts %}{% endblock %}
+
+<script src="/bower_components/jquery_lazyload/jquery.lazyload.js"></script>
+<script>
+	$('img.lazy').lazyload();
+</script>
 {% if theme.fancybox %}
 	<script src="/bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
 	<script>
-		(function ($) {
-			$('.fancybox').fancybox();
-		})(jQuery);
+		$('.fancybox').fancybox();
 	</script>
 {% endif %}
-
-{% block scripts %}{% endblock %}
 
 {% if theme.google_analytics %}
 	<script>
