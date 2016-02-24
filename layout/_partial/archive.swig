@@ -1,4 +1,4 @@
-{% if page.archive && !page.year %}
+{% if page.archive %}
 	{% include '../_widget/search.swig' %}
 	{% include '../_widget/category.swig' %}
 	{% include '../_widget/tag.swig' %}
@@ -9,12 +9,8 @@
 		<h2 class="archive-title category"><i class="fa fa-folder"></i> {{ page.category }}</h2>
 	{% elseif page.tag %}
 		<h2 class="archive-title tag"><i class="fa fa-tags"></i> #{{ page.tag }}</h2>
-	{% elseif page.archive && page.month %}
-		<h2 class="archive-title">{{ page.year + '-' + page.month}}</h2>
-	{% elseif page.archive && page.year%}
-		<h2 class="archive-title">{{ page.year }}</h2>
 	{% else %}
-		<h2 class="archive-title">{{ __('archive') }}</h2>
+		<h2 class="archive-title"><i class="fa fa-archive"></i> {{ __('archive') }}</h2>
 	{% endif %}
 
 	{% for item in page.posts %}
@@ -39,4 +35,5 @@
 		</article>
 	{% endfor %}
 
+	{% include 'pagination.swig' %}
 </div>
