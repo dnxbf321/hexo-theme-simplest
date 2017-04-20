@@ -5,7 +5,7 @@
 {% block primary %}
 
 	{% for post in page.posts %}
-		{% set pipe = {item: post} %}
+		{% set pipe = {index:true, item: post} %}
 		{% include '_partial/article.swig' with pipe %}
 	{% endfor %}
 
